@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng build --prod",
     "compress": "gzipper compress dist/my-dream-app",
+    "zip": "7z a ./dist/my-dream-app/zFile.zip ./dist/my-dream-app/*",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.0.6",
     "@angular/router": "~9.0.6",
     "gzipper": "^4.0.1",
+    "node-7z": "^2.1.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
