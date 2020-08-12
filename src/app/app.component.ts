@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-dream-app';
-  test: string;
+  test = 'v1.13';
 }
