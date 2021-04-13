@@ -30,7 +30,7 @@ jobs:
           npm run compress
           npm run zip
       - name: set env
-        run: echo "::set-env name=NOW::$(date +'%Y-%m-%dT%H:%M:%S')"
+        run: echo "::set-env name=NOW::v$(date +'%Y%m%d.%H%M%S')"
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1
         with:
