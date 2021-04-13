@@ -1,4 +1,7 @@
-on: push
+on:
+  push:
+    tags:
+    - '*'
 name: Build Angular
 jobs:
   build:
@@ -30,8 +33,7 @@ jobs:
           npm run compress
           npm run zip
       - name: Push Build to Releases
-        uses: google-github-actions/release-please-action@v2.19.2
+        uses: ncipollo/release-action@v1
         with:
-          path: "dist/my-dream-app/*"
+          artifacts: "dist/my-dream-app/*"
           token: ${{ secrets.CICD }}
-          release-type: simple
