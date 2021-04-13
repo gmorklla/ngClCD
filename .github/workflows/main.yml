@@ -30,7 +30,8 @@ jobs:
           npm run compress
           npm run zip
       - name: Push Build to Releases
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1.8.3
         with:
           artifacts: "dist/my-dream-app/*"
           token: ${{ secrets.CICD }}
+          tag: "Test"
