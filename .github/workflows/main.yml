@@ -29,8 +29,11 @@ jobs:
           npm run build
           npm run compress
           npm run zip
+      - name: set env
+        run: echo "::set-env name=NOW::$(date +'%Y-%m-%dT%H:%M:%S')"
       - name: Push Build to Releases
         uses: ncipollo/release-action@v1
         with:
           artifacts: "dist/my-dream-app/*"
           token: ${{ secrets.CICD }}
+          tag: ${{ env.NOW }}
