@@ -34,4 +34,4 @@ jobs:
         with:
           path: "dist/my-dream-app/*"
           token: ${{ secrets.CICD }}
-          release-type: node
+          release-type: simple
