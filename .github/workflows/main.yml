@@ -34,4 +34,3 @@ jobs:
         with:
           artifacts: "dist/my-dream-app/*"
           token: ${{ secrets.CICD }}
-          tag: "Test"
